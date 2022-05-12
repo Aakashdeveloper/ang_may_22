@@ -1,0 +1,72 @@
+https://code.visualstudio.com/ > install
+https://nodejs.org/en/ > install
+https://github.com/ > create account
+https://git-scm.com/downloads > install
+https://github.com/Aakashdeveloper > Follow
+
+// Chrome extension
+> https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
+
+// extension in Vscode
+vscode-icons
+tabnine
+spellcheck
+githistory
+gitlens
+
+///////
+NPM
+
+HTML
+Css
+Bootstrap
+Basic javascript/typescript
+
+Fullstack zomato app
+Login app (jwt)
+combine login + zomato
+Login With Github
+Template Form
+Reactive Form
+PWA > Angular App Offline
+Lazy Loading with Angular
+Angular Material
+Testing
+Multilingual
+Github
+Deployment
+>>>>>>>>>
+AWS
+Nginx
+Docker
+Heroku
+Netlify
+> Angular over node server (MEAN)
+> Angular over Python server
+> Jenkins For Angular
+
+////Angular
+Angular is frontend framework which help to build single-page applications(spa)
+using component base structure
+
+> open source (any body can contribute in development)
+
+//////////
+NPM
+> Node Package Manager (1,959,466)
+
+////////////////////////////////
+JSON > JavaScript Object Notation (way to represent data)
+[
+    {
+        "name":"John",
+        "city":"Amsterdam",
+        "age":20,
+        "size":"XL"
+    },
+    {
+        "name":"Nikita",
+        "city":"Paris",
+        "storage":"128GB"
+    }
+]
