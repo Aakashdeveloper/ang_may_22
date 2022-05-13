@@ -70,3 +70,61 @@ JSON > JavaScript Object Notation (way to represent data)
         "storage":"128GB"
     }
 ]
+
+
+////////////////////
+Package.json
+> Entry point to app
+> Meta Data of applications (name,description,version)
+> Packages (what all packages used in app)
+> script (start,build,test)
+
+////Step to generate Package.json//////
+**NodeJs must be install in laptop
+> open the terminal
+> npm init
+> answer all question
+> type "yes"
+
+////Step to install Package//////
+**NodeJs must be install in laptop
+> open the terminal
+> npm i packagename
+
+> npm uninstall packagename
+
+///////////
+Package.json > Entry point to app
+Package-lock> dependency tree (all other dependent package)
+node-modules > contains all the dependency
+.gitignore> help to ignore pushing files/folders
+Readme.md(markdown) > Details description of applications
+
+//Step to generate angular app
+///window
+#One time for each laptop
+> open the cmd as administrator
+> npm i -g @angular/cli
+> close cmd
+
+#next every time you need new app
+> open cmd
+> go inside folder where you want app
+> ng new appname
+
+
+///mac/linux
+#One time for each laptop
+> open terminal
+> sudo npm i -g @angular/cli
+
+#next every time you need new app
+> open terminal
+> go inside folder where you want app
+> ng new appname
+
+
+///how to run the app
+> open terminal/cmd
+> npm start
+> localhost:4200
