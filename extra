@@ -91,6 +91,8 @@ Package.json
 > open the terminal
 > npm i packagename
 
+> npm i packagename@1.2.0
+
 > npm uninstall packagename
 
 ///////////
@@ -99,6 +101,27 @@ Package-lock> dependency tree (all other dependent package)
 node-modules > contains all the dependency
 .gitignore> help to ignore pushing files/folders
 Readme.md(markdown) > Details description of applications
+.tsconfig.json > this help to make code convert into js
+.tsconfig.app.json  > this file let where is complied files present
+karma > help for test configuration
+.editorConfig > Make same standard for all developer
+.browserlistrc > browser version & compatibilty
+angular.json > this is first file to run the app
+             > Any common css add here
+             > which is the first htmlfile
+Src >>>>>>>>
+style.css > common css file of the app
+polyfills> use for making applications run on internet explorer
+main.ts > first .ts file of angular app
+index.html > first .html of the app
+
+
+
+.spec > they are all testing files
+
+
+Package.json > angular.json > main.ts
+
 
 //Step to generate angular app
 ///window
@@ -123,8 +146,26 @@ Readme.md(markdown) > Details description of applications
 > go inside folder where you want app
 > ng new appname
 
-
 ///how to run the app
 > open terminal/cmd
 > npm start
 > localhost:4200
+
+
+////////////////////
+Building Block of angular
+////////////
+
+Modules 
+    > Here all the declarations happen
+    > Parent of the app
+Component
+    > Html,css logics
+Pipes
+    > filter the data
+    > run time data change
+Services
+    > To conncet with external agent
+    > dependency injection
+Routing
+    > to jump between the pages
