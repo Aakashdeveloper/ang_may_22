@@ -120,8 +120,12 @@ index.html > first .html of the app
 .spec > they are all testing files
 
 
-Package.json > angular.json > main.ts
+Package.json > angular.json > main.ts > app.module.ts >app.component.ts
+                ||
+                \/  Complied HTML
+            index.html
 
+Browser will load  > index.html
 
 //Step to generate angular app
 ///window
@@ -156,19 +160,25 @@ Package.json > angular.json > main.ts
 Building Block of angular
 ////////////
 
-Modules 
+Modules   (NgModule)
     > Here all the declarations happen
     > Parent of the app
-Component
+Component  (Component)
     > Html,css logics
-Pipes
+Pipes (Pipe, PipeTransform)
     > filter the data
     > run time data change
-Services
-    > To conncet with external agent
+Services (Injectable)
+    > To connect with external agent
     > dependency injection
-Routing
+Routing (NgModule)
     > to jump between the pages
+
+1 Main Module
+    > app.module.ts
+1 Main Component
+    > app.component.ts
+
 
 
 Dear Students please pay the fee for ________(Course name)_____ (time) by Mr. __________ Fee  Rs. _______

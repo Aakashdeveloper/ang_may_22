@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    template: `<h1>Hi From Developer Funnel App</h1>`
 })
-export class AppComponent {
-  title = 'firstapp';
+
+export class AppComponent{
+
 }
