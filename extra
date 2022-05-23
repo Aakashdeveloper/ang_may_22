@@ -222,3 +222,46 @@ Image
 Something about u
 TechStack
 Footer
+
+inline
+styletag
+stylesheet
+
+inline>styletag>stylesheet
+
+#inline
+{
+    color:red,
+    font-size:30px
+}
+
+#styletag
+{
+    color:orange,
+    border:1px,
+    background-color:green
+}
+
+#stylesheet{
+    border:5px;
+    font-size:35px;
+    font-weight:bold
+}
+
+{
+   color:red;
+   font-size:30px;
+   border:1px;
+   background-color:green;
+   font-weight:bold
+}
+
+
+////////
+TagName > H1,a 
+Id
+> #
+> Use to target unique values
+Class
+> .
+> Use to target multiple element with same property
