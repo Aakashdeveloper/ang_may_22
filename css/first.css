@@ -1,0 +1,36 @@
+h1{
+    text-align:center;
+    color:rgb(122, 240, 217)
+}
+#subHeading{
+    text-align:center;
+    color:red
+}
+#gray{
+    background-color:#3b6394;
+}
+.card{
+    height:400px;
+    background-color:#6EA0DE;
+    width:20%;
+    float:left;
+    margin-left:4%;
+    overflow:scroll
+}
+.brown{
+    background-color:rgb(134, 110, 98);
+}
+
+.yellow{
+    background-color:#b28a86
+}
+.blue{
+    background-color: #437993
+}
+.card > img{
+    height:200px;
+    width:100%
+}
+.card >h2{
+    text-align:center;
+}
