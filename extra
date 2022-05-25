@@ -267,3 +267,13 @@ Class
 > Use to target multiple element with same property
 
 https://raw.githubusercontent.com/Aakashdeveloper/Aakashdeveloper/master/README.md
+
+
+solid
+dotted
+dashed
+groove
+double
+
+position:absolute
+position:relative

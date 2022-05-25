@@ -11,3 +11,5 @@ git push -u origin main
 git add .
 git commit -m "first commit"
 git push
+
+git remote add origin https://username:key@github.com/Aakashdeveloper/codeprofile1.git
