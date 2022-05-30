@@ -1,0 +1,36 @@
+#first{
+    height:200px;
+    background-color:skyblue
+}
+#second{
+    height:200px;
+    background-color:rgb(159, 236, 174)
+}
+#third{
+    height:200px;
+    background-color:rgb(130, 134, 136)
+}
+#fourth{
+    height:200px;
+    background-color:rgb(240, 172, 191)
+}
+#fifth{
+    height:200px;
+    background-color:rgb(219, 225, 163)
+}
+#sixth{
+    height:200px;
+    background-color:rgb(185, 176, 240)
+}
+#seventh{
+    height:200px;
+    background-color:rgb(57, 91, 105)
+}
+.delete{
+    font-size:30px;
+    color:red
+}
+.edit{
+    font-size:30px;
+    color:green
+}

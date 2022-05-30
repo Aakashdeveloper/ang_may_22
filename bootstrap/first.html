@@ -3,8 +3,131 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="first.css" rel="stylesheet"/>
     </head>
     <body>
-
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">WebSiteName</a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Page 1</a></li>
+                  <li><a href="#">Page 2</a></li>
+                  <li><a href="#">Page 3</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Developer Funnel</h1>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+                </p>
+                <button class="btn btn-primary"  data-toggle="modal" data-target="#devModal">Click</button>
+                <button class="btn btn-success">Click</button>
+                <button class="btn btn-warning">Click</button>
+                <button class="btn btn-danger">Click</button>
+                <button class="btn btn-info">Click</button>
+            </div>
+            <div class="row">
+                <div id="first" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="second" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="third" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="fourth" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="fifth" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="sixth" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="seventh" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+            </div>
+            <hr/>
+                <span class="glyphicon glyphicon-trash delete"></span>
+                <span class="glyphicon glyphicon-edit edit"></span>
+            <hr/>
+            <div class="media">
+                <div class="media-left">
+                  <img src="foodWallpaper.png" class="media-object" style="width:200px">
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading">John Doe</h4>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+                   </p>
+                </div>
+            </div>
+            <div class="media">
+                <div class="media-body">
+                    <h4 class="media-heading">John Doe</h4>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+                     </p>
+                </div>
+                <div class="media-right">
+                  <img src="foodWallpaper.png" class="media-object" style="width:200px">
+                </div>
+               
+            </div>
+            
+            <div id="devModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+              
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+              
+                </div>
+              </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Students
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>RollNo</th>
+                                <th>Name</th>
+                                <th>Class</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <th>Amit</th>
+                                <th>Ui</th>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>Parul</th>
+                                <th>React</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <img src="foodWallpaper.png" alt="fw" class="img-responsive"/>
+            
+        </div>
     </body>
 </html>

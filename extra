@@ -277,3 +277,9 @@ double
 
 position:absolute
 position:relative
+
+gird
+xs < 768px
+sm > 768xp
+md > 992px
+lg > 1200px
