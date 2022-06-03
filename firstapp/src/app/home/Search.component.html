@@ -3,16 +3,18 @@
         <span>D!</span>
     </div>
     <div id="heading">
-        Search Place Near To You
+        {{title}}
     </div>
     <div id="dropdown">
-        <select>
-            <option>Delhi</option>
-            <option>Mumbai</option>
+        <select (change)="handleCity($event)">
+            <option value="default">--SELECT YOUR CITY--</option>
+            <option *ngFor="let loc of locationData" [value]="loc.state_id">
+                {{loc.state}}
+            </option>
         </select>
         <select id="restaurants">
-            <option>Ama Cafe</option>
-            <option>Wow Momos</option>
+            <option [value]="textNumber">{{keyWord}}</option>
+            <option value="2">Wow Momos</option>
         </select>
     </div>
 </div>
