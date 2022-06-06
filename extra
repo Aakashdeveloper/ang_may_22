@@ -334,3 +334,14 @@ xxl > 1400px
        
 (get) restaurants>         https://zomatoajulypi.herokuapp.com/restaurants
 https://developerpayment.herokuapp.com/paynow
+
+
+///es5
+var age = 10
+var a = "My age is "+age
+"My age is 10"
+
+//es6
+var age = 10
+var a = `My age is ${age}`
+"My age is 10"
