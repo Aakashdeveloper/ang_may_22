@@ -1,5 +1,6 @@
 import {Component,OnInit} from '@angular/core';
 import {ICity} from './location.model';
+import {IRest} from './rest.model';
 import {HomeService} from '../services/home.service';
 
 @Component({
@@ -13,6 +14,8 @@ export class SearchComponent implements OnInit {
     keyWord: String = 'Test Date'
     textNumber : Number = 1
     locationData: ICity[] = [];
+    restaurants: IRest[] = [];
+    userText: String = 'User Text Here'
 
     constructor(private homeService:HomeService){
       console.log("I am in constructor")
@@ -27,5 +30,8 @@ export class SearchComponent implements OnInit {
 
     handleCity(event:Event){
       console.log((event.target as HTMLInputElement).value)
+      let stateId = Number((event.target as HTMLInputElement).value)
+      this.homeService.getRestaurants(stateId)
+        .subscribe((data:IRest[]) => this.restaurants = data)
     }
 }

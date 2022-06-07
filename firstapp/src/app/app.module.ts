@@ -1,8 +1,9 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
-import {AppComponent} from './app.component';
-import {HeaderComponent} from './headers/header.component';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './headers/header.component';
 import { FooterComponent } from './footer/footer.component'
 import { HomeComponent } from './home/Home.component';
 import { SearchComponent } from './home/Search.component';
@@ -23,7 +24,8 @@ import { HomeService } from './services/home.service';
     // all the modules
     imports: [
         BrowserModule,
-        HttpClientModule
+        HttpClientModule,
+        FormsModule
     ],
     // All services
     providers: [

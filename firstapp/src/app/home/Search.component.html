@@ -5,6 +5,8 @@
     <div id="heading">
         {{title}}
     </div>
+   
+    
     <div id="dropdown">
         <select (change)="handleCity($event)">
             <option value="default">--SELECT YOUR CITY--</option>
@@ -13,8 +15,19 @@
             </option>
         </select>
         <select id="restaurants">
-            <option [value]="textNumber">{{keyWord}}</option>
-            <option value="2">Wow Momos</option>
+            <option value="default">--SELECT YOUR Restaurants--</option>
+            <option *ngFor="let rest of restaurants" [value]="rest.restaurant_id">
+                {{rest.restaurant_name}}-{{rest.address}}
+            </option>
         </select>
     </div>
 </div>
+
+
+<!-- <div style="font-size:30px">
+    <input [(ngModel)]="userText"/>
+    <p style="color:white;">
+        {{userText}}
+    </p>
+    
+</div> -->

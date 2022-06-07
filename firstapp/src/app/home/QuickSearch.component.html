@@ -6,83 +6,29 @@
         Find Restaurants By MealType
     </span>
     <div class="mainBox">
-        <div class="tileContainer">
+        <div class="tileContainer" *ngFor="let meal of mealType">
             <div class="tileComponent1">
-                <img src="../../assets/dinner.png" alt="rest"/>
+                <img [src]="meal.meal_image" alt="rest"/>
             </div>
             <div class="tileComponent2">
                 <div class="componentHeading">
-                    <a href="./listing.html">BreakFast</a>
+                    <a href="./listing.html">{{meal.mealtype}}</a>
                 </div>
                 <div class="componentSubHeading">
-                    Best Deal For Breakfast
-                </div>
-            </div>
-        </div>
-        <div class="tileContainer">
-            <div class="tileComponent1">
-                <img src="../../assets/dinner.png" alt="rest"/>
-            </div>
-            <div class="tileComponent2">
-                <div class="componentHeading">
-                    <a href="./listing.html">BreakFast</a>
-                </div>
-                <div class="componentSubHeading">
-                    Best Deal For Breakfast
-                </div>
-            </div>
-        </div>
-        <div class="tileContainer">
-            <div class="tileComponent1">
-                <img src="../../assets/dinner.png" alt="rest"/>
-            </div>
-            <div class="tileComponent2">
-                <div class="componentHeading">
-                    <a href="./listing.html">BreakFast</a>
-                </div>
-                <div class="componentSubHeading">
-                    Best Deal For Breakfast
-                </div>
-            </div>
-        </div>
-        <div class="tileContainer">
-            <div class="tileComponent1">
-                <img src="../../assets/dinner.png" alt="rest"/>
-            </div>
-            <div class="tileComponent2">
-                <div class="componentHeading">
-                    <a href="./listing.html">BreakFast</a>
-                </div>
-                <div class="componentSubHeading">
-                    Best Deal For Breakfast
-                </div>
-            </div>
-        </div>
-        <div class="tileContainer">
-            <div class="tileComponent1">
-                <img src="../../assets/dinner.png" alt="rest"/>
-            </div>
-            <div class="tileComponent2">
-                <div class="componentHeading">
-                    <a href="./listing.html">BreakFast</a>
-                </div>
-                <div class="componentSubHeading">
-                    Best Deal For Breakfast
-                </div>
-            </div>
-        </div>
-        <div class="tileContainer">
-            <div class="tileComponent1">
-                <img src="../../assets/dinner.png" alt="rest"/>
-            </div>
-            <div class="tileComponent2">
-                <div class="componentHeading">
-                    <a href="./listing.html">BreakFast</a>
-                </div>
-                <div class="componentSubHeading">
-                    Best Deal For Breakfast
+                    
+                    {{meal.content}}
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- 
+     <a href="./listing.html">{{meal.mealtype | lowercase  }}</a>
+    <div>
+    <h3>{{price | currency:'GBP'}}</h3>
+</div> 
+<div>
+                    <h3>{{opened | date:'M/d/y'}}</h3>
+                </div>
+-->
