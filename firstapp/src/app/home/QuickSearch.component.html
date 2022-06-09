@@ -12,7 +12,7 @@
             </div>
             <div class="tileComponent2">
                 <div class="componentHeading">
-                    <a href="./listing.html">{{meal.mealtype}}</a>
+                    <a [routerLink]="['/listing',meal.mealtype_id]">{{meal.mealtype | MyUpper:'Lower'}}</a>
                 </div>
                 <div class="componentSubHeading">
                     

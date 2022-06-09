@@ -345,3 +345,12 @@ var a = "My age is "+age
 var age = 10
 var a = `My age is ${age}`
 "My age is 10"
+
+////params
+> pass after / in url
+> we need to define in routing
+> use for very small data like (id, name)
+////queryparams
+> pass after ?
+> no need to define
+> use for passing multiple values

@@ -9,6 +9,9 @@ import { HomeComponent } from './home/Home.component';
 import { SearchComponent } from './home/Search.component';
 import { QuickSearchComponent } from './home/QuickSearch.component';
 import { HomeService } from './services/home.service';
+import { MyUpperPipe } from './pipes/myupper.pipe';
+import { AppRoutingModule } from './app-routing.module';
+import { ListingComponent } from './lisiting/listing.component';
 
 //decorator
 @NgModule({
@@ -19,13 +22,16 @@ import { HomeService } from './services/home.service';
         FooterComponent,
         HomeComponent,
         SearchComponent,
-        QuickSearchComponent
+        QuickSearchComponent,
+        MyUpperPipe,
+        ListingComponent
     ],
     // all the modules
     imports: [
         BrowserModule,
         HttpClientModule,
-        FormsModule
+        FormsModule,
+        AppRoutingModule
     ],
     // All services
     providers: [
