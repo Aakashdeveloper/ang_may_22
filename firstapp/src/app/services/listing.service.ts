@@ -5,7 +5,7 @@ import {IRest} from '../home/rest.model';
 
 @Injectable()
 
-export class HomeService{
+export class ListingService{
     private restUrl = "https://zomatoajulypi.herokuapp.com/restaurant?mealtype_id=";
 
     constructor(private http:HttpClient){}

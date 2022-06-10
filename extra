@@ -354,3 +354,20 @@ var a = `My age is ${age}`
 > pass after ?
 > no need to define
 > use for passing multiple values
+
+
+var a = ["Delhi","Mumbai","Pune","Indore"]
+undefined
+a.indexOf('Delhi')
+0
+a.indexOf('Indore')
+3
+a.indexOf('Amsterdam')
+-1
+a.indexOf('London')
+-1
+
+
+var a = [5,8,9,2,4,7]
+a.filter((data) => {return data>5})
+[8, 9, 7]

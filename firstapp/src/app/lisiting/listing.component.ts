@@ -1,5 +1,7 @@
 import {Component,OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {ListingService} from '../services/listing.service';
+import {IRest} from '../home/rest.model';
 
 @Component({
     templateUrl: './listing.component.html',
@@ -8,11 +10,19 @@ import {ActivatedRoute} from '@angular/router';
 
 export class ListingComponent implements OnInit {
     mealId: number = 1;
+    restaurants: IRest[] = [];
+    userInput: string = ''
 
-    constructor(private route:ActivatedRoute) {}
+    constructor(private route:ActivatedRoute,
+        private listingService: ListingService) {}
 
     ngOnInit(){
         this.mealId = Number(this.route.snapshot.params['id'])
+        sessionStorage.setItem('mealId', this.route.snapshot.params['id']);
+        this.listingService.getRwrtM(this.mealId)
+        .subscribe((data:IRest[]) => {
+            this.restaurants = data
+        })
     }
 
 }

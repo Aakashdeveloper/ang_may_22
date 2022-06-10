@@ -12,6 +12,8 @@ import { HomeService } from './services/home.service';
 import { MyUpperPipe } from './pipes/myupper.pipe';
 import { AppRoutingModule } from './app-routing.module';
 import { ListingComponent } from './lisiting/listing.component';
+import { ListingService } from './services/listing.service';
+import { RestSearchPipe } from './pipes/search.pipe';
 
 //decorator
 @NgModule({
@@ -24,7 +26,8 @@ import { ListingComponent } from './lisiting/listing.component';
         SearchComponent,
         QuickSearchComponent,
         MyUpperPipe,
-        ListingComponent
+        ListingComponent,
+        RestSearchPipe
     ],
     // all the modules
     imports: [
@@ -35,7 +38,8 @@ import { ListingComponent } from './lisiting/listing.component';
     ],
     // All services
     providers: [
-        HomeService
+        HomeService,
+        ListingService
     ],
     // only and only main components
     bootstrap:[
