@@ -11,7 +11,8 @@ import {IRest} from '../home/rest.model';
 export class ListingComponent implements OnInit {
     mealId: number = 1;
     restaurants: IRest[] = [];
-    userInput: string = ''
+    userInput: string = '';
+    filterText: string = "Cuisine Filter"
 
     constructor(private route:ActivatedRoute,
         private listingService: ListingService) {}
@@ -23,6 +24,10 @@ export class ListingComponent implements OnInit {
         .subscribe((data:IRest[]) => {
             this.restaurants = data
         })
+    }
+
+    dataReceive(cuisineId:string){
+        console.log("cusineId>>>>",cuisineId)
     }
 
 }

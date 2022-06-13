@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ListingComponent } from './lisiting/listing.component';
 import { ListingService } from './services/listing.service';
 import { RestSearchPipe } from './pipes/search.pipe';
+import { CuisineFilter } from './filters/cuisineFilter.component';
 
 //decorator
 @NgModule({
@@ -27,7 +28,8 @@ import { RestSearchPipe } from './pipes/search.pipe';
         QuickSearchComponent,
         MyUpperPipe,
         ListingComponent,
-        RestSearchPipe
+        RestSearchPipe,
+        CuisineFilter
     ],
     // all the modules
     imports: [

@@ -9,6 +9,9 @@
     float: left;
     border: 5px solid gray;
 }
+.mealFilter{
+    margin-left:10px;
+}
 #content{
     width:65%;
     float: left;
