@@ -6,7 +6,10 @@
             <div class="mealFilter">
                 <app-cuisine-filter [filterName]="filterText" (cuisineClicked)="dataReceive($event)"></app-cuisine-filter>
                 <hr/>
+                <app-cost-filter [filterName]="filterText1"  (costClicked)="costDataReceive($event)"></app-cost-filter>
+                <hr/>
             </div>
+
         </div>
         <div id="content">
             <div class="row">
@@ -48,7 +51,7 @@
                                         {{rest.cuisines[0].cuisine_name}}
                                     </span> &nbsp;
                                     <span class="label label-info">
-                                        {{rest.cuisines[0].cuisine_name}}
+                                        {{rest.cuisines[1].cuisine_name}}
                                     </span>
                                 </div>
                             </div>

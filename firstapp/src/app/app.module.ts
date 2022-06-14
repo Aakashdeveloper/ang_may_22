@@ -15,6 +15,7 @@ import { ListingComponent } from './lisiting/listing.component';
 import { ListingService } from './services/listing.service';
 import { RestSearchPipe } from './pipes/search.pipe';
 import { CuisineFilter } from './filters/cuisineFilter.component';
+import { CostFilter } from './filters/costFilter.component';
 
 //decorator
 @NgModule({
@@ -29,7 +30,8 @@ import { CuisineFilter } from './filters/cuisineFilter.component';
         MyUpperPipe,
         ListingComponent,
         RestSearchPipe,
-        CuisineFilter
+        CuisineFilter,
+        CostFilter
     ],
     // all the modules
     imports: [

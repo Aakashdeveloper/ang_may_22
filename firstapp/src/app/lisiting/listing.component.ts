@@ -13,6 +13,7 @@ export class ListingComponent implements OnInit {
     restaurants: IRest[] = [];
     userInput: string = '';
     filterText: string = "Cuisine Filter"
+    filterText1: string = "Cost Filter"
 
     constructor(private route:ActivatedRoute,
         private listingService: ListingService) {}
@@ -28,6 +29,19 @@ export class ListingComponent implements OnInit {
 
     dataReceive(cuisineId:string){
         console.log("cusineId>>>>",cuisineId)
+        this.listingService.getCuisineData(cuisineId)
+        .subscribe((data:IRest[]) => {
+            this.restaurants = data
+        })
+    }
+
+    costDataReceive(cost: string){
+        let lcost = Number(cost.split('-')[0])
+        let hcost = Number(cost.split('-')[1])
+        this.listingService.getCostData(lcost,hcost)
+        .subscribe((data:IRest[]) => {
+            this.restaurants = data
+        })
     }
 
 }

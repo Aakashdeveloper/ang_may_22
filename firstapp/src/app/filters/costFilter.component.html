@@ -1,0 +1,39 @@
+<h3 style="text-align: center;">{{filterName}}</h3>
+<div class="radio">
+    <div>
+        <label>
+            <input type="radio" 
+            value="100-300"
+            [(ngModel)]="costType"
+            (change)="onCostSelect()"/>
+            100-300
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="radio" 
+            value="301-600"
+            [(ngModel)]="costType"
+            (change)="onCostSelect()"/>
+            301-600
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="radio" 
+            value="601-1000"
+            [(ngModel)]="costType"
+            (change)="onCostSelect()"/>
+            601-1000
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="radio" 
+            value="1001-2000"
+            [(ngModel)]="costType"
+            (change)="onCostSelect()"/>
+            1001-2000
+        </label>
+    </div>
+</div>
