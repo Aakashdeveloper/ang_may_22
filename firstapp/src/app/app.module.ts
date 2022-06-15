@@ -5,46 +5,30 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './headers/header.component';
 import { FooterComponent } from './footer/footer.component'
-import { HomeComponent } from './home/Home.component';
-import { SearchComponent } from './home/Search.component';
-import { QuickSearchComponent } from './home/QuickSearch.component';
-import { HomeService } from './services/home.service';
-import { MyUpperPipe } from './pipes/myupper.pipe';
 import { AppRoutingModule } from './app-routing.module';
-import { ListingComponent } from './lisiting/listing.component';
-import { ListingService } from './services/listing.service';
-import { RestSearchPipe } from './pipes/search.pipe';
-import { CuisineFilter } from './filters/cuisineFilter.component';
-import { CostFilter } from './filters/costFilter.component';
-
+import { HomeModule } from './home/home.module';
+import { ListingModule } from './lisiting/listing.module';
+import { DetailModule } from './details/details.modules';
 //decorator
 @NgModule({
     // ALl the components & pipe 
     declarations: [
         AppComponent,
         HeaderComponent,
-        FooterComponent,
-        HomeComponent,
-        SearchComponent,
-        QuickSearchComponent,
-        MyUpperPipe,
-        ListingComponent,
-        RestSearchPipe,
-        CuisineFilter,
-        CostFilter
+        FooterComponent
     ],
     // all the modules
     imports: [
         BrowserModule,
         HttpClientModule,
         FormsModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HomeModule,
+        ListingModule,
+        DetailModule
     ],
     // All services
-    providers: [
-        HomeService,
-        ListingService
-    ],
+    providers: [],
     // only and only main components
     bootstrap:[
         AppComponent

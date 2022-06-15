@@ -32,7 +32,7 @@
                         </div>
                         <div class="col-md-7">
                             <div class="hotel_name">
-                                <a href="">
+                                <a [routerLink]="['/details']" [queryParams]="{restId: rest.restaurant_id}">
                                 {{rest.restaurant_name}}
                                 </a>
                                 <div class="city_name">{{rest.address}}</div>
