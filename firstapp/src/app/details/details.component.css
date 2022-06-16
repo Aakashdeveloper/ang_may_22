@@ -1,0 +1,52 @@
+#mainContent{
+    height:600px;
+    width:85%;
+    margin-left: 8%;
+    margin-top: 2%;
+}
+
+.imgDiv{
+    height:500px;
+    width:45%;
+    float:left;
+    border:5px groove gray;
+    box-shadow: 10px 20px 10px gray;
+    
+}
+
+.imgDiv > img {
+    height:500px;
+    width:100%;
+}
+.contentDiv{
+    height:600px;
+    width:50%;
+    margin-left: 2%;
+    margin-top: -2%;
+    float: left;
+}
+
+.feature_container{
+    width:100%;
+    display: inline-block;
+}
+.feature{
+    float: left;
+    margin-left: 5%;
+}
+.imgIcon{
+    height:100px;
+    width:100px;
+    margin-left: 2%;
+}
+
+h2{
+    font-size:35px;
+    color: green;
+}
+
+.btn{
+    height: 50px;
+    width: 200px;
+    font-size:20px
+}
