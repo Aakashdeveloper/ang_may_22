@@ -1,0 +1,27 @@
+<div class="container">
+    <hr/>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Employee Form
+        </div>
+        <div class="panel-body">
+            <form #form="ngForm">
+                <div class="form-group">
+                    <label for="fname" class="control-label">First Name</label>
+                    <input type="text" class="form-control"
+                    name="firstName"
+                    [(ngModel)]="myEmployee.firstName"/>
+                </div>
+                <div class="form-group">
+                    <label for="lname" class="control-label">Last Name</label>
+                    <input type="text" class="form-control"
+                    name="lastName"
+                    [(ngModel)]="myEmployee.lastName"/>
+                </div>
+                <button type="submit" class="btn btn-success">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
