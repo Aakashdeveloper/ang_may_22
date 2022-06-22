@@ -5,19 +5,80 @@
             Employee Form
         </div>
         <div class="panel-body">
-            <form #form="ngForm">
-                <div class="form-group">
+            <form #form="ngForm" (submit)="submitForm(form)">
+                <div class="form-group" [class.has-error]="firstname.invalid && firstname.touched">
                     <label for="fname" class="control-label">First Name</label>
                     <input type="text" class="form-control"
-                    name="firstName"
-                    [(ngModel)]="myEmployee.firstName"/>
+                    name="firstName" required
+                    (ngModelChange) = "firstToUpper($event)"
+                    [ngModel]="myEmployee.firstName"
+                    #firstname="ngModel"
+                    />
+                    <div class="alert alert-danger" *ngIf="firstname.invalid && firstname.touched">
+                        FirstName is required
+                    </div>
                 </div>
+                <!-- <div>
+                    <h4>Classes</h4>
+                    <h3>{{firstname.invalid}}</h3>
+                   <h3>{{firstname.className}}</h3>
+                </div> -->
                 <div class="form-group">
                     <label for="lname" class="control-label">Last Name</label>
                     <input type="text" class="form-control"
                     name="lastName"
                     [(ngModel)]="myEmployee.lastName"/>
                 </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group" [class.has-error]="mail.invalid && mail.dirty">
+                            <label for="fname" class="control-label">Email</label>
+                            <input type="text" class="form-control"
+                            name="email"
+                            pattern="^([a-zA-Z0-9]+)@([a-zA-Z0-9]+)\.([a-zA-Z]{2,5})$"
+                            [(ngModel)]="myEmployee.email"
+                            #mail="ngModel"
+                            />
+                            <div class="alert alert-danger" *ngIf="mail.invalid && mail.dirty">
+                                Please Enter Valid Email
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group" [class.has-error]="pass.invalid && pass.dirty">
+                            <label for="fname" class="control-label">Password</label>
+                            <input type="password" class="form-control"
+                            name="password"
+                            minlength="8"
+                            [(ngModel)]="myEmployee.password"
+                            #pass="ngModel"
+                            (click)="showPass($event)"
+                            >
+                            <div class="alert alert-danger" *ngIf="pass.invalid && pass.dirty">
+                                Min length of Password is 8
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" [class.has-error]="hasCodeLangError">
+                    <label for="clang" class="control-label">Code Lang</label>
+                    <select class="form-control"
+                        [(ngModel)]="myEmployee.clang"
+                        name="clang"
+                        id="clang"
+                        (blur) = "validateCodeLang()"
+                    >
+                        <option value="default">Please Select Code Lange</option>
+                        <option *ngFor="let lang of language">
+                            {{lang}}
+                        </option>
+                    </select>
+                    <div class="alert alert-danger" *ngIf="hasCodeLangError">
+                        Please Select Valid Option
+                    </div>
+                </div>
+                
                 <button type="submit" class="btn btn-success">
                     Submit
                 </button>

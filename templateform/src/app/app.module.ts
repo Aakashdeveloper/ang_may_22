@@ -7,11 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsComponent } from './forms/forms.component';
 import { FormService } from './forms/form.service';
+import { AftersubmitComponent } from './aftersubmit/aftersubmit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormsComponent
+    FormsComponent,
+    AftersubmitComponent
   ],
   imports: [
     BrowserModule,

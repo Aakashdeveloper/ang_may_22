@@ -25,12 +25,13 @@ HTML
 Css
 Bootstrap
 Basic javascript/typescript
-
 Fullstack zomato app
+Template Form 
+DummyApi
+//////////////////////
 Login app (jwt)
 combine login + zomato
 Login With Github
-Template Form
 Reactive Form
 PWA > Angular App Offline
 Angular Material
@@ -370,3 +371,8 @@ a.indexOf('London')
 var a = [5,8,9,2,4,7]
 a.filter((data) => {return data>5})
 [8, 9, 7]
+
+ng-dirty ng-touched ng-invalid
+ng-prestine ng-untouched ng-valid
+
+npx json-server --watch employee.json --port 8700
