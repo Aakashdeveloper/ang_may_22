@@ -1,0 +1,77 @@
+<hr/>
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        Reactive Form
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal" [formGroup]="employeeFrom">
+            <div class="form-group" [ngClass]="{'has-error': (employeeFrom.get('firstName').touched ||
+                                                               employeeFrom.get('firstName').dirty) && 
+                                                               !employeeFrom.get('firstName').valid}">
+                <label class="col-md-2 control-label" for="fname">
+                    FirstName
+                </label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control"
+                    id="fname"
+                    formControlName="firstName"
+                    />
+                    <div class="help-block" *ngIf="(employeeFrom.get('firstName').touched ||
+                                                     (employeeFrom.get('firstName').dirty) && 
+                                                      employeeFrom.get('firstName').errors)">
+                        <span *ngIf="employeeFrom.get('firstName').errors.required">
+                            Please Enter FirstName
+                        </span>
+                        <span *ngIf="employeeFrom.get('firstName').errors.minlength">
+                            Min length should be 3
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group" [ngClass]="{'has-error': ( employeeFrom.get('lastName').touched ||
+                                                               employeeFrom.get('lastName').dirty) && 
+                                                               !employeeFrom.get('lastName').valid}">
+                <label class="col-md-2 control-label" for="lname">
+                    LastName
+                </label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control"
+                    id="lname"
+                    formControlName="lastName"
+                    />
+                    <div class="help-block" *ngIf="(employeeFrom.get('lastName').touched ||
+                                                     (employeeFrom.get('lastName').dirty) && 
+                                                      employeeFrom.get('lastName').errors)">
+                        <span *ngIf="employeeFrom.get('lastName').errors.maxlength">
+                            Max length should be 5
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" [ngClass]="{'has-error': ( employeeFrom.get('email').touched ||
+                                                               employeeFrom.get('email').dirty) && 
+                                                               !employeeFrom.get('email').valid}">
+                <label class="col-md-2 control-label" for="email">
+                    Email
+                </label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control"
+                    id="email"
+                    formControlName="email"
+                    />
+                    <div class="help-block" *ngIf="(employeeFrom.get('email').touched ||
+                                                     (employeeFrom.get('email').dirty) && 
+                                                      employeeFrom.get('email').errors)">
+                        <span *ngIf="employeeFrom.get('email').errors.required">
+                            Email is required
+                        </span>                              
+                        <span *ngIf="employeeFrom.get('email').errors.pattern">
+                            Please Enter Valid Email
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </form> 
+    </div>
+</div>  
