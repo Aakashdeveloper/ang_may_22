@@ -11,6 +11,7 @@ import { LoginformComponent } from './loginform/loginform.component';
 import { RegisterformComponent } from './registerform/registerform.component';
 import { RegisterService } from './registerform/registerform.service';
 import { UserService } from './user-list/user.service';
+import { LoginService } from './loginform/loginform.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { UserService } from './user-list/user.service';
   ],
   providers: [
     RegisterService,
-    UserService
+    UserService,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })

@@ -2,8 +2,8 @@
     <div class="panel panel-info">
         <div class="panel-heading">
             <h2>UserList</h2>
-            <button class="btn btn-danger">Logout</button> &nbsp;
-            <button class="btn btn-success">Profile</button>
+            <button class="btn btn-danger" (click)="logoutUser()">Logout</button> &nbsp;
+            <button class="btn btn-success" [routerLink]="['/profile']">Profile</button>
         </div>
         <div class="panel-body">
             <table class="table">
