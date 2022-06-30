@@ -30,6 +30,9 @@ Template Form
 DummyApi
 Reactive Form
 Login app (jwt)
+Heroku
+> Angular over node server (MEAN)
+Nginx
 //////////////////////
 combine login + zomato
 Login With Github
@@ -41,11 +44,8 @@ Github
 Deployment
 >>>>>>>>>
 AWS
-Nginx
 Docker
-Heroku
 Netlify
-> Angular over node server (MEAN)
 > Angular over Python server
 > Jenkins For Angular
 
