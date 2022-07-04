@@ -30,9 +30,13 @@ Template Form
 DummyApi
 Reactive Form
 Login app (jwt)
+Deployment
+>>>>>>>>>
+AWS
 Heroku
 > Angular over node server (MEAN)
 Nginx
+> Jenkins For Angular
 //////////////////////
 combine login + zomato
 Login With Github
@@ -41,13 +45,11 @@ Angular Material
 Testing
 Multilingual
 Github
-Deployment
->>>>>>>>>
-AWS
+
 Docker
 Netlify
 > Angular over Python server
-> Jenkins For Angular
+
 
 ////Angular
 Angular is frontend framework which help to build single-page applications(spa)
@@ -393,3 +395,4 @@ npx json-server --watch employee.json --port 8700
 /******UserInfo*****/
 (GET) => https://developerjwt.herokuapp.com/api/auth/userinfo
 (Header) => {'x-access-token':'token value from login'}
+
