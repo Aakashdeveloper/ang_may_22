@@ -1,0 +1,66 @@
+<div class="container">
+    <hr/>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            Place order
+        </div>
+        <div class="panel-body">
+            <form #form="ngForm" (submit)="submitForm(form)">
+                <div class="form-group" [class.has-error]="firstname.invalid && firstname.touched">
+                    <label for="name" class="control-label">Name</label>
+                    <input type="text" class="form-control"
+                    name="name" required
+                    [(ngModel)]="myOrder.name"
+                    #firstname="ngModel"
+                    />
+                    <div class="alert alert-danger" *ngIf="firstname.invalid && firstname.touched">
+                        FirstName is required
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group" [class.has-error]="mail.invalid && mail.dirty">
+                            <label for="fname" class="control-label">Email</label>
+                            <input type="text" class="form-control"
+                            name="email"
+                            pattern="^([a-zA-Z0-9]+)@([a-zA-Z0-9]+)\.([a-zA-Z]{2,5})$"
+                            [(ngModel)]="myOrder.email"
+                            #mail="ngModel"
+                            />
+                            <div class="alert alert-danger" *ngIf="mail.invalid && mail.dirty">
+                                Please Enter Valid Email
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="address" class="control-label">Address</label>
+                            <input type="text" class="form-control"
+                            name="address"
+                            [(ngModel)]="myOrder.address"
+                            >
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group" [class.has-error]="Phone.invalid && Phone.dirty">
+                            <label for="phone" class="control-label">Phone</label>
+                            <input type="text" class="form-control"
+                            name="phone"
+                            minlength="10"
+                            [(ngModel)]="myOrder.phone"
+                            #Phone="ngModel"
+                            >
+                            <div class="alert alert-danger" *ngIf="Phone.invalid && Phone.dirty">
+                                Min length of Phone is 8
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

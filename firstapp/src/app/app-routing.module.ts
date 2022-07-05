@@ -2,9 +2,15 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './home/Home.component';
 import {ListingComponent} from './lisiting/listing.component';
-import {DetailsComponent} from './details/details.component'
+import {DetailsComponent} from './details/details.component';
+import { LoginformComponent } from './loginform/loginform.component';
+import { RegisterformComponent } from './registerform/registerform.component';
+import { PlaceorderComponent } from './placeorder/placeorder.component';
 
 const routes: Routes = [
+    {path:'order/:restName',component: PlaceorderComponent},
+    {path:'login',component: LoginformComponent},
+    {path:'register',component: RegisterformComponent},
     {path:'details',component: DetailsComponent},
     {path:'listing/:id',component: ListingComponent},
     {path:'home',component: HomeComponent},

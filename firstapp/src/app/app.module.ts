@@ -9,13 +9,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './home/home.module';
 import { ListingModule } from './lisiting/listing.module';
 import { DetailModule } from './details/details.modules';
+import { LoginformComponent } from './loginform/loginform.component';
+import { RegisterformComponent } from './registerform/registerform.component';
+import { RegisterService } from './registerform/registerform.service';
+import { LoginService } from './loginform/loginform.service';
+import { PlaceorderComponent } from './placeorder/placeorder.component';
 //decorator
 @NgModule({
     // ALl the components & pipe 
     declarations: [
         AppComponent,
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        RegisterformComponent,
+        LoginformComponent,
+        PlaceorderComponent,
     ],
     // all the modules
     imports: [
@@ -28,7 +36,10 @@ import { DetailModule } from './details/details.modules';
         DetailModule
     ],
     // All services
-    providers: [],
+    providers: [
+        RegisterService,
+        LoginService
+    ],
     // only and only main components
     bootstrap:[
         AppComponent
