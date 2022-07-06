@@ -11,9 +11,11 @@ import { ListingModule } from './lisiting/listing.module';
 import { DetailModule } from './details/details.modules';
 import { LoginformComponent } from './loginform/loginform.component';
 import { RegisterformComponent } from './registerform/registerform.component';
-import { RegisterService } from './registerform/registerform.service';
-import { LoginService } from './loginform/loginform.service';
+import { RegisterService } from './services/registerform.service';
+import { LoginService } from './services/loginform.service';
 import { PlaceorderComponent } from './placeorder/placeorder.component';
+import { OrderService } from './services/placeOrder.service';
+import { ViewBookingComponent } from './view-booking/view-booking.component';
 //decorator
 @NgModule({
     // ALl the components & pipe 
@@ -24,6 +26,7 @@ import { PlaceorderComponent } from './placeorder/placeorder.component';
         RegisterformComponent,
         LoginformComponent,
         PlaceorderComponent,
+        ViewBookingComponent,
     ],
     // all the modules
     imports: [
@@ -38,7 +41,8 @@ import { PlaceorderComponent } from './placeorder/placeorder.component';
     // All services
     providers: [
         RegisterService,
-        LoginService
+        LoginService,
+        OrderService
     ],
     // only and only main components
     bootstrap:[

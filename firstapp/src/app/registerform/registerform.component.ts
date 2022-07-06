@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IRegister } from './regsiter.model';
 import { NgForm } from '@angular/forms';
-import { RegisterService } from './registerform.service';
+import { RegisterService } from '../services/registerform.service';
 import { Router } from '@angular/router';
 
 @Component({

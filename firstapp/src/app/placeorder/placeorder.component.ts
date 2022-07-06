@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { IOrder } from './placeOrder.model';
 import { NgForm } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { OrderService } from '../services/placeOrder.service'
 
 @Component({
   selector: 'app-placeorder',
@@ -10,19 +12,25 @@ import { NgForm } from '@angular/forms';
 })
 export class PlaceorderComponent {
 
-  constructor(private router: Router,) {}
+  constructor(private router: Router, private route: ActivatedRoute,
+              private orderService: OrderService) {}
+  
+  id:number = Math.floor(Math.random() * 100000)
+  restName:string = this.route.snapshot.params['restName']
+  userInfo:string|null = sessionStorage.getItem('userResponse')
 
-    myOrder = new IOrder('Amit','a@a.com','Hno 29',9765675653);
+  name = this.userInfo?this.userInfo.split(',')[1]:''
+  email = this.userInfo?this.userInfo.split(',')[2]:''
+  phone = this.userInfo?this.userInfo.split(',')[3]:''
+
+  myOrder = new IOrder(this.name,this.email,'Hno 29',Number(this.phone),760,this.id,this.restName);
 
 
-    submitForm(Form: NgForm):void{  
+  submitForm(Form: NgForm):void{  
     console.log(Form.value)
-      // this.registerService.registerEmp(Form.value)
-      // .subscribe((res:any[]) => { console.log('User Regsitered',res)})
-      this.router.navigate(['/login'])
-    }
+    this.orderService.postOrder(Form.value)
+    .subscribe((res:any[]) => { console.log('Order Places',res)})
+    this.router.navigate(['/viewBooking'])
+  }
 
 }
-
-
-//private registerService: RegisterService

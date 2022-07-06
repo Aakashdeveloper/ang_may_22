@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            <h2>Orders</h2>
+        </div>
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Rname</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of orders">
+                        <td>{{data.id}}</td>
+                        <td>{{data.hotel_name}}</td>
+                        <td>{{data.name}}</td>
+                        <td>{{data.email}}</td>
+                        <td>Rs. {{data.cost}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

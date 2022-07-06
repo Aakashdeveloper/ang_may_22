@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import { LoginService } from '../loginform/loginform.service';
+import { LoginService } from '../services/loginform.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserRes } from '../loginform/login.model';
 

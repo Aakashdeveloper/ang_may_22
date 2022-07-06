@@ -1,0 +1,40 @@
+{
+  "orders": [
+    {
+      "cost": 760,
+      "id": 770,
+      "hotel_name": "AMA Cafe",
+      "name": "Neeraj",
+      "email": "neeraj@gmail.com",
+      "address": "Hno 29",
+      "phone": 9765675653
+    },
+    {
+      "cost": 760,
+      "id": 98127,
+      "hotel_name": "Burger King",
+      "name": "Lavish",
+      "email": "lavish@gmail.com",
+      "address": "Hno 29",
+      "phone": 936464566
+    },
+    {
+      "cost": 760,
+      "id": 22994,
+      "hotel_name": "Cafe Wink",
+      "name": "Lavish",
+      "email": "lavish@gmail.com",
+      "address": "Hno 29",
+      "phone": 936464566
+    },
+    {
+      "cost": 760,
+      "id": 26419,
+      "hotel_name": "Pandit Ji Paratha Hut",
+      "name": "Neeraj",
+      "email": "neeraj@gmail.com",
+      "address": "Hno 29",
+      "phone": 9765675653
+    }
+  ]
+}

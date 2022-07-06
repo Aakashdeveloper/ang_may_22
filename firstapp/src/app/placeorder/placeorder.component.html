@@ -2,10 +2,13 @@
     <hr/>
     <div class="panel panel-info">
         <div class="panel-heading">
-            Place order
+            <h2>Your order for restaurants {{restName}}</h2>
         </div>
         <div class="panel-body">
             <form #form="ngForm" (submit)="submitForm(form)">
+                <input type="hidden" [(ngModel)]="myOrder.cost" name="cost"/>
+                <input type="hidden" [(ngModel)]="myOrder.id" name="id"/>
+                <input type="hidden" [(ngModel)]="myOrder.hotel_name" name="hotel_name"/>
                 <div class="form-group" [class.has-error]="firstname.invalid && firstname.touched">
                     <label for="name" class="control-label">Name</label>
                     <input type="text" class="form-control"
@@ -56,7 +59,9 @@
                             
                         </div>
                     </div>
+                    
                 </div>
+                <h3>Total Cost : Rs.760</h3>
                 <button type="submit" class="btn btn-success">
                     Submit
                 </button>

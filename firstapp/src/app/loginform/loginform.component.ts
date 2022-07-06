@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ILogin, LoginRes, UserRes} from './login.model';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
-import { LoginService }  from './loginform.service';
+import { LoginService }  from '../services/loginform.service';
 
 @Component({
   selector: 'app-loginform',
@@ -24,7 +24,8 @@ export class LoginformComponent{
           (res:LoginRes) => {
             this.loginError = ''
             this.loginService.getUserInfo(res['token'])
-            .subscribe((response:UserRes) => (this.validDateUser(response['role'])))
+            .subscribe((response:UserRes) => (this.validDateUser(
+              response['role'],response['name'],response['email'],response['phone'])))
           },
           (err:any[])=>{
             console.log(err)
@@ -33,8 +34,9 @@ export class LoginformComponent{
         )
   }
 
-  validDateUser(roleType:string):void{
-    sessionStorage.setItem('Role_Type', roleType)
+  validDateUser(role:string,name:string,email:string,phone:string):void{
+    let userResponse = `${role},${name},${email},${phone}`;
+    sessionStorage.setItem('userResponse', userResponse)
     this.router.navigate(['/'])
     window.location.reload()
   }

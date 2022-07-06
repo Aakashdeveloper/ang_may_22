@@ -6,8 +6,10 @@ import {DetailsComponent} from './details/details.component';
 import { LoginformComponent } from './loginform/loginform.component';
 import { RegisterformComponent } from './registerform/registerform.component';
 import { PlaceorderComponent } from './placeorder/placeorder.component';
+import { ViewBookingComponent } from './view-booking/view-booking.component';
 
 const routes: Routes = [
+    {path:'viewBooking', component:ViewBookingComponent},
     {path:'order/:restName',component: PlaceorderComponent},
     {path:'login',component: LoginformComponent},
     {path:'register',component: RegisterformComponent},

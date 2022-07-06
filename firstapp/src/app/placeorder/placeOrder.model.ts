@@ -4,5 +4,8 @@ export class IOrder {
         public email: string,
         public address: string,
         public phone: number,
+        public cost:number,
+        public id:number,
+        public hotel_name:string
     ){}
 }
