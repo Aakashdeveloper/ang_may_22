@@ -1,19 +1,16 @@
 <div class="container">
     <hr/>
-    <div class="panel panel-info">
+    <div class="panel panel-success">
         <div class="panel-heading">
-            <h2>Your order for restaurants {{restName}}</h2>
+            Register Form
         </div>
         <div class="panel-body">
             <form #form="ngForm" (submit)="submitForm(form)">
-                <input type="hidden" [(ngModel)]="myOrder.cost" name="cost"/>
-                <input type="hidden" [(ngModel)]="myOrder.id" name="id"/>
-                <input type="hidden" [(ngModel)]="myOrder.hotel_name" name="hotel_name"/>
                 <div class="form-group" [class.has-error]="firstname.invalid && firstname.touched">
                     <label for="name" class="control-label">Name</label>
                     <input type="text" class="form-control"
                     name="name" required
-                    [(ngModel)]="myOrder.name"
+                    [(ngModel)]="myEmployee.name"
                     #firstname="ngModel"
                     />
                     <div class="alert alert-danger" *ngIf="firstname.invalid && firstname.touched">
@@ -27,7 +24,7 @@
                             <input type="text" class="form-control"
                             name="email"
                             pattern="^([a-zA-Z0-9]+)@([a-zA-Z0-9]+)\.([a-zA-Z]{2,5})$"
-                            [(ngModel)]="myOrder.email"
+                            [(ngModel)]="myEmployee.email"
                             #mail="ngModel"
                             />
                             <div class="alert alert-danger" *ngIf="mail.invalid && mail.dirty">
@@ -36,12 +33,18 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="address" class="control-label">Address</label>
-                            <input type="text" class="form-control"
-                            name="address"
-                            [(ngModel)]="myOrder.address"
+                        <div class="form-group" [class.has-error]="pass.invalid && pass.dirty">
+                            <label for="fname" class="control-label">Password</label>
+                            <input type="password" class="form-control"
+                            name="password"
+                            minlength="8"
+                            [(ngModel)]="myEmployee.password"
+                            #pass="ngModel"
                             >
+                            <div class="alert alert-danger" *ngIf="pass.invalid && pass.dirty">
+                                Min length of Password is 8
+                            </div>
+                            
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -50,7 +53,7 @@
                             <input type="text" class="form-control"
                             name="phone"
                             minlength="10"
-                            [(ngModel)]="myOrder.phone"
+                            [(ngModel)]="myEmployee.phone"
                             #Phone="ngModel"
                             >
                             <div class="alert alert-danger" *ngIf="Phone.invalid && Phone.dirty">
@@ -59,33 +62,10 @@
                             
                         </div>
                     </div>
-                    
                 </div>
-                <h3>Total Cost : Rs.760</h3>
-                <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                <button type="submit" class="btn btn-success">
                     Submit
                 </button>
-                <div id="myModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-                  
-                      <!-- Modal content-->
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          <h4 class="modal-title">Order Payment For Id {{myOrder.id}}</h4>
-                        </div>
-                        <div class="modal-body">
-                          <p>Procced for payment of Rs. {{myOrder.cost}}</p>
-                          <a class="btn btn-info" [href]='url'>
-                            PayNow
-                          </a>
-                        </div>
-                        
-                      </div>
-                  
-                    </div>
-                </div>                  
-               
             </form>
         </div>
     </div>

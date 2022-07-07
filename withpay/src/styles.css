@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin: auto;
+}
+a{
+    text-decoration:none
+}
+
+
+@media screen and (max-width:1600px){
+    body {
+        background-color: #d7b7ca
+    }
+}
+
+@media screen and (max-width:1400px){
+    body {
+        background-color: #e0b1f1
+    }
+}
+
+@media screen and (max-width:1200px){
+    body {
+        background-color: #e9eeab
+    }
+}
+
+@media screen and (max-width:1000px){
+    body {
+        background-color: #b2c3ec
+    }
+    .tileContainer{
+        width:45%;
+    }
+}
+
+@media screen and (max-width:800px){
+    body {
+        background-color: #b2ecd0
+    }
+    #quickSearch{
+        margin-left: 15%;
+    }
+    .tileContainer{
+        width:80%;
+    }
+}
+
+@media screen and (max-width:600px){
+    body {
+        background-color: #f5bbbb
+    }
+}

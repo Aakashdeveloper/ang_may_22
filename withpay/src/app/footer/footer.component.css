@@ -1,0 +1,30 @@
+footer{
+    height:150px;
+    width:100%;
+    background:#3b2632;
+    color:white
+    /* border:5px double orange */
+}
+.footDiv{
+    float:left;
+    height:50px;
+    width:32%;
+    text-align: center;
+    border-right:2px solid white; 
+}
+ul{
+    list-style-type: none;
+}
+.noborder{
+    border:none
+}
+h4{
+    text-align: center;
+}
+#social{
+    float: right;
+    margin-right: 1%;
+}
+.socialImg{
+    height:50px
+}

@@ -1,0 +1,26 @@
+<header>
+    <div id="brand">
+        Developer Funnel
+    </div>
+    <a class="btn btn-info" [routerLink]="['/home']">Home</a>
+    <div id="social">
+        <div *ngIf='token === ""'>
+            <a [routerLink]="['/login']" class="btn btn-warning">
+                <span class="glyphicon glyphicon-log-in"></span> Login
+            </a> &nbsp;
+             <a [routerLink]="['/register']" class="btn btn-success">
+                <span class="glyphicon glyphicon-user"></span> Register
+            </a>
+        </div>
+        <div *ngIf='token !== ""'>
+            <a [routerLink]="['/']" class="btn btn-info">
+                <span class="glyphicon glyphicon-user"></span> Hi {{userInfo.name}}
+            </a> &nbsp;
+             <a (click)="logoutUser()" class="btn btn-danger">
+                <span class="glyphicon glyphicon-log-out"></span> Logout
+            </a>
+        </div>
+       
+       
+    </div> 
+</header>

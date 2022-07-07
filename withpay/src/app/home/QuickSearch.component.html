@@ -1,0 +1,34 @@
+<div id="quickSearch">
+    <span id="QuickSearchHeading">
+        Quick Search
+    </span>
+    <span id="QuickSubHeading">
+        Find Restaurants By MealType
+    </span>
+    <div class="mainBox">
+        <div class="tileContainer" *ngFor="let meal of mealType">
+            <div class="tileComponent1">
+                <img [src]="meal.meal_image" alt="rest"/>
+            </div>
+            <div class="tileComponent2">
+                <div class="componentHeading">
+                    <a [routerLink]="['/listing',meal.mealtype_id]">{{meal.mealtype | MyUpper:'Lower'}}</a>
+                </div>
+                <div class="componentSubHeading">
+                    
+                    {{meal.content}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 
+     <a href="./listing.html">{{meal.mealtype | lowercase  }}</a>
+    <div>
+    <h3>{{price | currency:'GBP'}}</h3>
+</div> 
+<div>
+                    <h3>{{opened | date:'M/d/y'}}</h3>
+                </div>
+-->

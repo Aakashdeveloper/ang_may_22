@@ -1,0 +1,68 @@
+<div class="row">
+    <div id="mainListing">
+        <div id="filter">
+            <h3>Filters</h3>
+            <hr/>
+            <div class="mealFilter">
+                <app-cuisine-filter [filterName]="filterText" (cuisineClicked)="dataReceive($event)"></app-cuisine-filter>
+                <hr/>
+                <app-cost-filter [filterName]="filterText1"  (costClicked)="costDataReceive($event)"></app-cost-filter>
+                <hr/>
+            </div>
+
+        </div>
+        <div id="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Enter Restaurant Name"
+                        [(ngModel)] = "userInput"/>
+                    </div>
+                    <p> Results for <b>{{userInput}}</b></p>
+                    <p>Number of results: {{ (restaurants | searchFilter:userInput).length}}</p>
+                </div>
+            </div>
+
+            <div *ngIf="restaurants && restaurants.length; else noData">
+                <div class="item" *ngFor="let rest of restaurants | searchFilter:userInput">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img [src]='rest.restaurant_thumb' class="Image"
+                            alt='alt'/>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="hotel_name">
+                                <a [routerLink]="['/details']" [queryParams]="{restId: rest.restaurant_id}">
+                                {{rest.restaurant_name}}
+                                </a>
+                                <div class="city_name">{{rest.address}}</div>
+                                <div class="city_name">{{rest.rating_text}}</div>
+                                <div class="city_name">Rs. {{rest.cost}}</div>
+                                <div class="labelDiv">
+                                    <span class="label label-primary">
+                                    {{rest.mealTypes[0].mealtype_name}}
+                                    </span> &nbsp;
+                                    <span class="label label-success">
+                                        {{rest.mealTypes[1].mealtype_name}}
+                                    </span>
+                                </div>
+                                <div class="labelDiv">
+                                    <span class="label label-danger">
+                                        {{rest.cuisines[0].cuisine_name}}
+                                    </span> &nbsp;
+                                    <span class="label label-info">
+                                        {{rest.cuisines[1].cuisine_name}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ng-template #noData>
+                <h1>Loading</h1>
+                <img src="../../assets/loader.gif"/>
+            </ng-template>
+        </div>
+    </div>
+</div>
