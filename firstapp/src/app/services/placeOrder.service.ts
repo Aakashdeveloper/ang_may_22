@@ -18,14 +18,12 @@ export class OrderService {
         return this.http.get<any[]>(`${this.OrderUrl}?email=${email}`)
     }
 
-    updateOrder(id:number,status:string,date:string,bank:string): Observable<any[]>{
-        let data = {
+    updateOrder(id:Number,status:string,date:string,bank:string): Observable<any[]>{
+        let data={
             status,
             date,
             bank
         }
         return this.http.patch<any[]>(`${this.OrderUrl}/${id}`,data)
     }
-
-    
 }

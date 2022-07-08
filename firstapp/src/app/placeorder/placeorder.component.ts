@@ -32,10 +32,8 @@ export class PlaceorderComponent {
     this.orderService.postOrder(Form.value)
     .subscribe((res:any[]) => { console.log('Order Places',res)})
     //this.router.navigate(['/viewBooking'])
-    this.url = 'http://localhost:4000/paynow?amount='+Form.value.cost+'&orderId='+Form.value.id+'&email='+Form.value.email+'&phone='+Form.value.phone;
+    this.url = 'http://localhost:4000/paynow?amount='+Form.value.cost+'&orderId='+Form.value.id+'&email='+Form.value.email+'&phone='+Form.value.phone
     console.log(this.url)
   }
 
 }
-
-//}&email=${Form.value.email}&phone=${Form.value.phone}

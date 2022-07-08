@@ -37,6 +37,9 @@ Heroku
 > Angular over node server (MEAN)
 Nginx
 > Jenkins For Angular
+Netlify
+Docker
+> Angular over Python server
 combine login + zomato
 //////////////////////
 Login With Github
@@ -45,11 +48,6 @@ Angular Material
 Testing
 Multilingual
 Github
-
-Docker
-Netlify
-> Angular over Python server
-
 
 ////Angular
 Angular is frontend framework which help to build single-page applications(spa)
@@ -396,3 +394,10 @@ npx json-server --watch employee.json --port 8700
 (GET) => https://developerjwt.herokuapp.com/api/auth/userinfo
 (Header) => {'x-access-token':'token value from login'}
 
+
+
+http://localhost:4000/paynow?amount=100&orderId=1234&email=aa@gmail.com&phone=76786787
+
+
+docker build . -t imagename
+docker run -p 8790:4200 imagename
