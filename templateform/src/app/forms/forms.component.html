@@ -5,6 +5,22 @@
             Employee Form
         </div>
         <div class="panel-body">
+            
+            <button mat-button color="primary">Primary</button>
+            <button mat-raised-button color="accent">Accent</button>
+            <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+                <mat-icon>home</mat-icon>
+            </button>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Assignee</mat-label>
+                <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                  <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option.name}}
+                  </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+
             <form #form="ngForm" (submit)="submitForm(form)">
                 <div class="form-group" [class.has-error]="firstname.invalid && firstname.touched">
                     <label for="fname" class="control-label">First Name</label>

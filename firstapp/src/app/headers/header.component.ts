@@ -11,9 +11,11 @@ import { UserRes } from '../loginform/login.model';
 
 export class HeaderComponent{
     constructor(private loginService: LoginService,
-        private router: Router) { }
+        private router: Router,
+        private route:ActivatedRoute) { }
 
     token:string|null = ''
+    code:string|null = ''
     userInfo: UserRes = {
         "_id": "",
         "name": "",
@@ -25,9 +27,22 @@ export class HeaderComponent{
     }
 
     ngOnInit(): void {
-        this.token = sessionStorage.getItem('Token_Number')
-        this.loginService.getUserInfo(this.token?this.token:'')
-        .subscribe((res:UserRes) => this.userInfo = res)
+        this.code = this.route.snapshot.queryParamMap.get('code')
+        console.log(">>>code",this.route.snapshot.queryParamMap)
+        if(this.code){
+            let requestedData={
+                code:this.code
+            }
+            this.loginService.getGitProfile(requestedData)
+                .subscribe((res:any) => {console.log(">>>>",res)})
+
+
+        }else{
+            this.token = sessionStorage.getItem('Token_Number')
+            this.loginService.getUserInfo(this.token?this.token:'')
+            .subscribe((res:UserRes) => this.userInfo = res)
+        }
+       
     }
 
     logoutUser():void{
