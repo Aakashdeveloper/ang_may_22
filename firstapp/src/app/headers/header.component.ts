@@ -25,22 +25,34 @@ export class HeaderComponent{
         "role": "",
         "__v": 0
     }
+    uname:string = '';
+    uImage:string = '';
+    gitStatus:string = 'noLogin'
+    loginStatus:boolean = false
 
     ngOnInit(): void {
-        this.code = this.route.snapshot.queryParamMap.get('code')
-        console.log(">>>code",this.route.snapshot.queryParamMap)
+        this.code = sessionStorage.getItem('code')
+        console.log(">>>code",sessionStorage.getItem('code'))
         if(this.code){
             let requestedData={
                 code:this.code
             }
             this.loginService.getGitProfile(requestedData)
-                .subscribe((res:any) => {console.log(">>>>",res)})
+                .subscribe(
+                    (res:any) => {
+                        this.uname = res.login;
+                        this.uImage = res.avatar_url;
+                        this.gitStatus = 'Login'
+                    })
 
 
         }else{
             this.token = sessionStorage.getItem('Token_Number')
             this.loginService.getUserInfo(this.token?this.token:'')
-            .subscribe((res:UserRes) => this.userInfo = res)
+            .subscribe((res:UserRes) => {
+                this.userInfo = res;
+                this.loginStatus = true
+            })
         }
        
     }
@@ -48,6 +60,8 @@ export class HeaderComponent{
     logoutUser():void{
         sessionStorage.removeItem('Token_Number');
         sessionStorage.removeItem('Role_Type');
+       // this.gitStatus = false;
+        this.loginStatus = false;
         this.router.navigate(['/']);
         window.location.reload()
     }

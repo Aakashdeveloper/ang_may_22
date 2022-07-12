@@ -20,7 +20,6 @@ Mobile:8919944069
 
 ///////
 NPM
-
 HTML
 Css
 Bootstrap
@@ -41,12 +40,12 @@ Netlify
 Docker
 > Angular over Python server
 combine login + zomato
+--------------------
 Angular Material (https://material.angular.io/components/select/examples)
-//////////////////////
 Login With Github
 PWA > Angular App Offline
-Testing
 Multilingual
+Testing
 Github
 
 ////Angular
@@ -401,3 +400,5 @@ http://localhost:4000/paynow?amount=100&orderId=1234&email=aa@gmail.com&phone=76
 
 docker build . -t imagename
 docker run -p 8790:4200 imagename
+
+https://medium.com/ngconf/angular-pwa-install-and-configure-858dd8e9fb07

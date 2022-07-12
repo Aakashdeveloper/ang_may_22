@@ -4,10 +4,11 @@
     </div>
     <a class="btn btn-info" [routerLink]="['/home']">Home</a>
     <div id="social">
+        
         <div *ngIf='token === ""'>
-            <a href="https://github.com/login/oauth/authorize?client_id=930f92e500db2f4d357c" class="btn btn-info">
+            <!-- <a href="https://github.com/login/oauth/authorize?client_id=930f92e500db2f4d357c" class="btn btn-info">
                 <span class="glyphicon glyphicon-log-in"></span> Login With Git
-            </a> &nbsp;
+            </a> &nbsp; -->
             <a [routerLink]="['/login']" class="btn btn-warning">
                 <span class="glyphicon glyphicon-log-in"></span> Login
             </a> &nbsp;
@@ -15,6 +16,16 @@
                 <span class="glyphicon glyphicon-user"></span> Register
             </a>
         </div>
+        <!-- <div *ngIf='gitStatus == true'>
+            <a [routerLink]="['/']" class="btn btn-info">
+                
+                <span class="glyphicon glyphicon-user"></span> Hi <img [src]="uImage" alt="profile" class="imgProfile"/>  {{uname}}
+               
+            </a> &nbsp;
+             <a (click)="logoutUser()" class="btn btn-danger">
+                <span class="glyphicon glyphicon-log-out"></span> Logout
+            </a>
+        </div> -->
         <div *ngIf='token !== ""'>
             <a [routerLink]="['/']" class="btn btn-info">
                 <span class="glyphicon glyphicon-user"></span> Hi {{userInfo.name}}

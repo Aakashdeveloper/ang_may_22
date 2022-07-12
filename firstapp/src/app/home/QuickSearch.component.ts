@@ -20,6 +20,8 @@ export class QuickSearchComponent implements OnInit{
 
     ngOnInit():void{
         this.code = this.route.snapshot.queryParamMap.get('code')
+        this.code = this.code? this.code :''
+        sessionStorage.setItem('code',this.code)
         console.log(">>>code",this.route.snapshot.queryParamMap)
         this.homeService.getMeal()
             .subscribe((data:IMeal[]) => this.mealType = data)
